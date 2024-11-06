@@ -1,0 +1,29 @@
+Berdasarkan topologi yang ditampilkan pada gambar, berikut adalah penjelasan mengenai konfigurasi jaringan tersebut:
+
+Router dan PC:
+
+Terdapat tiga router dalam jaringan ini, yaitu R1 (CR), R2 (KHI), dan R3 (KJ).
+Ada empat perangkat (PC) yang terhubung ke jaringan, masing-masing di subnet yang berbeda.
+Detail IP Address dan Interface:
+
+PC 1 terhubung ke jaringan melalui R1 (CR) dengan alamat IP 192.168.1.1/24 pada Ethernet 2.
+R1 (CR) memiliki beberapa interface:
+Ethernet 3: 11.11.11.1 (menghubungkan R1 ke R2).
+Ethernet 4: 12.12.12.1 (menghubungkan R1 ke R3).
+R2 (KHI) memiliki interface:
+Ethernet 3: 10.10.10.2 (menghubungkan R2 ke jaringan internal atau PC di subnet lain).
+Ethernet 4: 11.11.11.2 (menghubungkan R2 ke R1).
+PC 2 terhubung ke jaringan melalui R2 (KHI) dengan IP 192.168.3.1/24 pada Ethernet 2.
+R3 (KJ) memiliki beberapa interface:
+Ethernet 3: 10.10.10.1 (menghubungkan R3 ke R2).
+Ethernet 4: 12.12.12.2 (menghubungkan R3 ke R1).
+PC 3 terhubung ke jaringan melalui R3 (KJ) dengan IP 192.168.2.1/24 pada Ethernet 2.
+Deskripsi Jalur Routing:
+
+Setiap router terhubung melalui interface tertentu yang berfungsi sebagai jalur komunikasi antar-router.
+R1 terhubung dengan R2 melalui jaringan 11.11.11.0/24 dan dengan R3 melalui jaringan 12.12.12.0/24.
+R2 dan R3 juga memiliki koneksi melalui jaringan 10.10.10.0/24, yang menghubungkan keduanya.
+Tujuan Topologi:
+
+Topologi ini tampaknya dirancang untuk menghubungkan tiga subnet berbeda (192.168.1.0/24, 192.168.3.0/24, dan 192.168.2.0/24) melalui jaringan antar-router, memungkinkan komunikasi antar-perangkat di jaringan berbeda.
+Konfigurasi ini kemungkinan besar membutuhkan routing statis atau dinamis untuk memastikan perangkat-perangkat tersebut dapat saling berkomunikasi lintas subnet.
